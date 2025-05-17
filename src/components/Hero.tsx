@@ -11,19 +11,18 @@ const Hero = () => {
     <section className="relative h-screen flex items-center justify-center bg-gradient-to-r from-zd-blue/10 to-zd-green/10">
       <div 
         className="absolute inset-0 z-0 bg-cover bg-center opacity-10" 
-        style={{ backgroundImage: "url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80')" }}
+        style={{ backgroundImage: "url('https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&q=80')" }}
       ></div>
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 text-zd-blue">
             Transforming Business Through 
-            <span className="text-zd-green"> Sustainable Solutions</span>
+            <span className="text-zd-green"> Data & AI</span>
           </h1>
           
           <p className="text-lg md:text-xl mb-8 text-zd-gray-dark max-w-3xl mx-auto">
-            ZD Consultancy helps organizations implement effective ESG strategies, 
-            improve sustainability practices, and drive positive environmental and social impact.
+            ZD Consultancy helps organizations leverage data analytics, business intelligence, and AI agent solutions to make smarter decisions and optimize workflows.
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4">

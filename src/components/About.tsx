@@ -34,7 +34,7 @@ const About = () => {
         <div ref={sectionRef} className="text-center mb-12 reveal">
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-zd-blue">About ZD Consultancy</h2>
           <p className="text-lg text-zd-gray-dark max-w-3xl mx-auto">
-            We are dedicated to helping organizations build a more sustainable future.
+            We are dedicated to helping organizations harness the power of data and AI.
           </p>
         </div>
         
@@ -43,7 +43,7 @@ const About = () => {
             <div className="relative">
               <div className="bg-zd-blue/10 rounded-lg h-[400px] w-full overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80" 
+                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80" 
                   alt="ZD Consultancy Team" 
                   className="h-full w-full object-cover"
                 />
@@ -56,16 +56,16 @@ const About = () => {
           <div ref={contentRef} className="reveal">
             <h3 className="text-2xl font-display font-semibold mb-4 text-zd-green">Our Mission</h3>
             <p className="text-lg text-zd-gray-dark mb-6">
-              ZD Consultancy was founded with a vision to transform how businesses approach sustainability. 
-              Our mission is to help organizations integrate environmental, social, and governance factors 
-              into their core business strategies while driving long-term value creation.
+              ZD Consultancy was founded with a vision to transform how businesses leverage data and AI. 
+              Our mission is to help organizations extract maximum value from their data assets and implement 
+              intelligent solutions that drive growth, efficiency, and competitive advantage.
             </p>
             
             <h3 className="text-2xl font-display font-semibold mb-4 text-zd-green">Our Approach</h3>
             <p className="text-lg text-zd-gray-dark mb-6">
-              We combine deep industry expertise with innovative solutions to deliver tangible results. 
-              Our collaborative approach ensures that sustainability initiatives are aligned with your 
-              business objectives and create value for all stakeholders.
+              We combine deep technical expertise with business acumen to deliver practical solutions. 
+              Our collaborative approach ensures that data and AI initiatives align with your 
+              business objectives and deliver measurable results.
             </p>
             
             <Button 
