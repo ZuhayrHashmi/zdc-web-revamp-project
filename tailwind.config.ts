@@ -63,22 +63,22 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// ZD Consultancy colors
+				// ZD Consultancy colors - updated with teal palette
 				zd: {
-					blue: {
-						DEFAULT: '#0F4C81',
-						light: '#3B7EA1',
-						dark: '#0A325A',
-					},
-					green: {
-						DEFAULT: '#2E8B57', 
-						light: '#5AB283',
-						dark: '#216440',
+					teal: {
+						DEFAULT: '#026670', // Dark teal (from logo)
+						light: '#9FEDD7', // Light teal
+						medium: '#4ECDC4', // Medium teal
+						dark: '#013A40', // Darker teal
 					},
 					gray: {
 						DEFAULT: '#4A5568',
-						light: '#A0AEC0',
+						light: '#E0E0E0', // Light gray (like logo text)
 						dark: '#2D3748',
+					},
+					background: {
+						light: '#F8FDFF', // Very light teal tint for backgrounds
+						medium: '#E6F4F1', // Light teal background
 					}
 				},
 			},

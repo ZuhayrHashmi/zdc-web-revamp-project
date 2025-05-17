@@ -28,12 +28,12 @@ const Header = () => {
   ];
 
   return (
-    <header className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md py-3' : 'bg-transparent py-5'}`}>
+    <header className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 backdrop-blur-sm shadow-sm py-3' : 'bg-transparent py-5'}`}>
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
           <div className="flex-shrink-0">
             <a href="#" className="flex items-center">
-              <span className="text-2xl font-display font-bold text-zd-blue">ZD</span>
+              <span className="text-2xl font-display font-bold text-zd-teal">ZD</span>
               <span className="ml-2 text-xl font-display font-medium text-zd-gray">Consultancy</span>
             </a>
           </div>
@@ -42,7 +42,7 @@ const Header = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-zd-gray-dark hover:text-zd-blue focus:outline-none"
+              className="text-zd-gray-dark hover:text-zd-teal focus:outline-none"
               aria-label="Toggle menu"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -55,12 +55,12 @@ const Header = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-zd-gray-dark hover:text-zd-blue font-medium transition-colors"
+                className="text-zd-gray-dark hover:text-zd-teal font-medium transition-colors"
               >
                 {link.name}
               </a>
             ))}
-            <Button className="bg-zd-blue hover:bg-zd-blue-dark ml-4">
+            <Button className="bg-zd-teal hover:bg-zd-teal-dark ml-4">
               Get in Touch
             </Button>
           </nav>
@@ -74,14 +74,14 @@ const Header = () => {
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-zd-gray-dark hover:text-zd-blue font-medium transition-colors px-2 py-1"
+                  className="text-zd-gray-dark hover:text-zd-teal font-medium transition-colors px-2 py-1"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}
                 </a>
               ))}
               <Button 
-                className="bg-zd-blue hover:bg-zd-blue-dark w-full mt-2"
+                className="bg-zd-teal hover:bg-zd-teal-dark w-full mt-2"
                 onClick={() => {
                   setIsOpen(false);
                   window.location.href = "#contact";
