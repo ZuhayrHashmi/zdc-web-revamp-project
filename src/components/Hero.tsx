@@ -16,14 +16,6 @@ const Hero = () => {
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="mb-8 mx-auto w-40 md:w-48">
-            <img 
-              src="/lovable-uploads/b5eb5bbc-bbbf-41fa-81a6-633ae655a082.png" 
-              alt="ZD Consultancy Logo" 
-              className="w-full"
-            />
-          </div>
-          
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 text-zd-teal">
             Transforming Business Through 
             <span className="text-zd-teal-medium"> Data & AI</span>
