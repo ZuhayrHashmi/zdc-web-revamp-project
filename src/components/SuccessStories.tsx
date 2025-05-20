@@ -64,27 +64,27 @@ const SuccessStories = () => {
   };
   
   return (
-    <section className="section-padding bg-zd-blue text-white">
+    <section className="section-padding bg-white" id="success-stories">
       <div className="container mx-auto">
         <div ref={sectionRef} className="text-center mb-12 reveal">
-          <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">Client Success Stories</h2>
-          <p className="text-lg opacity-80 max-w-3xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-zd-teal-dark">Client Success Stories</h2>
+          <p className="text-lg text-zd-gray-dark max-w-3xl mx-auto">
             See how we've helped organizations transform their operations through data analytics and AI solutions.
           </p>
         </div>
         
         <div ref={storiesRef} className="relative max-w-4xl mx-auto reveal">
-          <div className="relative bg-white/10 backdrop-blur-sm p-8 md:p-12 rounded-lg">
-            <div className="absolute text-white/20 top-6 right-6 text-xl font-bold">
+          <div className="relative bg-zd-teal text-white p-8 md:p-12 rounded-lg shadow-lg">
+            <div className="absolute text-white/50 top-6 right-6 text-xl font-bold">
               {successStories[activeIndex].industry}
             </div>
             
             <div className="relative z-10 min-h-[280px] flex flex-col justify-center">
               <h3 className="text-2xl font-semibold mb-4">{successStories[activeIndex].title}</h3>
-              <p className="text-lg mb-6 opacity-90">{successStories[activeIndex].description}</p>
-              <div className="bg-white/10 p-4 rounded-lg">
-                <p className="font-semibold text-lg text-zd-green">Outcome:</p>
-                <p className="opacity-90">{successStories[activeIndex].outcome}</p>
+              <p className="text-lg mb-6 text-white">{successStories[activeIndex].description}</p>
+              <div className="bg-white/20 p-4 rounded-lg">
+                <p className="font-semibold text-lg text-white">Outcome:</p>
+                <p className="text-white">{successStories[activeIndex].outcome}</p>
               </div>
             </div>
             
@@ -107,7 +107,7 @@ const SuccessStories = () => {
               variant="outline"
               size="icon"
               onClick={prevStory}
-              className="bg-transparent border-white/20 text-white hover:bg-white/10"
+              className="border-zd-teal text-zd-teal hover:bg-zd-teal/10"
               aria-label="Previous story"
             >
               <ChevronLeft size={20} />
@@ -116,7 +116,7 @@ const SuccessStories = () => {
               variant="outline"
               size="icon"
               onClick={nextStory}
-              className="bg-transparent border-white/20 text-white hover:bg-white/10"
+              className="border-zd-teal text-zd-teal hover:bg-zd-teal/10"
               aria-label="Next story"
             >
               <ChevronRight size={20} />
