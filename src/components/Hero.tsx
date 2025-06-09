@@ -11,18 +11,18 @@ const Hero = () => {
     <section className="relative h-screen flex items-center justify-center bg-zd-background-light">
       <div 
         className="absolute inset-0 z-0 bg-cover bg-center opacity-5" 
-        style={{ backgroundImage: "url('https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&q=80')" }}
+        style={{ backgroundImage: "url('https://images.unsplash.com/photo-1560472354-b33ff0c44a43?auto=format&fit=crop&q=80')" }}
       ></div>
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 text-zd-teal">
             Transforming Business Through 
-            <span className="text-zd-teal-medium"> Data & AI</span>
+            <span className="text-zd-teal-medium"> Agentic AI Solutions</span>
           </h1>
           
           <p className="text-lg md:text-xl mb-8 text-zd-gray-dark max-w-3xl mx-auto">
-            ZD Consultancy helps organizations leverage data analytics, business intelligence, and AI agent solutions to make smarter decisions and optimize workflows.
+            ZDConsultancy specializes in intelligent AI agents that automate workflows, enhance decision-making, and optimize business processes. We also provide comprehensive business intelligence and data analytics solutions.
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4">
@@ -31,7 +31,7 @@ const Hero = () => {
               className="bg-zd-teal hover:bg-zd-teal-dark text-white"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              Request Consultation
+              Request AI Consultation
             </Button>
             <Button 
               size="lg" 
@@ -39,7 +39,7 @@ const Hero = () => {
               className="border-zd-teal text-zd-teal hover:bg-zd-teal/10"
               onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              Explore Our Services
+              Explore AI Solutions
             </Button>
           </div>
         </div>

@@ -29,50 +29,48 @@ const About = () => {
   }, []);
   
   return (
-    <section id="about" className="section-padding bg-gray-50">
+    <section id="about" className="section-padding bg-zd-background-light">
       <div className="container mx-auto">
         <div ref={sectionRef} className="text-center mb-12 reveal">
-          <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-zd-blue">About ZD Consultancy</h2>
+          <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-zd-teal-dark">About ZDConsultancy</h2>
           <p className="text-lg text-zd-gray-dark max-w-3xl mx-auto">
-            We are dedicated to helping organizations harness the power of data and AI.
+            We are dedicated to helping organizations harness the power of Agentic AI and intelligent data solutions.
           </p>
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div ref={imageRef} className="reveal">
             <div className="relative">
-              <div className="bg-zd-blue/10 rounded-lg h-[400px] w-full overflow-hidden">
+              <div className="bg-zd-teal/10 rounded-lg h-[400px] w-full overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80" 
-                  alt="ZD Consultancy Team" 
+                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80" 
+                  alt="Business meeting with AI solutions" 
                   className="h-full w-full object-cover"
                 />
               </div>
-              <div className="absolute -bottom-6 -right-6 bg-zd-green/20 h-32 w-32 rounded-lg z-0"></div>
-              <div className="absolute -top-6 -left-6 bg-zd-blue/20 h-24 w-24 rounded-lg z-0"></div>
+              <div className="absolute -bottom-6 -right-6 bg-zd-teal-medium/20 h-32 w-32 rounded-lg z-0"></div>
+              <div className="absolute -top-6 -left-6 bg-zd-teal/20 h-24 w-24 rounded-lg z-0"></div>
             </div>
           </div>
           
           <div ref={contentRef} className="reveal">
-            <h3 className="text-2xl font-display font-semibold mb-4 text-zd-green">Our Mission</h3>
+            <h3 className="text-2xl font-display font-semibold mb-4 text-zd-teal">Our Mission</h3>
             <p className="text-lg text-zd-gray-dark mb-6">
-              ZD Consultancy was founded with a vision to transform how businesses leverage data and AI. 
-              Our mission is to help organizations extract maximum value from their data assets and implement 
-              intelligent solutions that drive growth, efficiency, and competitive advantage.
+              ZDConsultancy was founded with a vision to transform how businesses leverage Agentic AI and intelligent automation. 
+              Our mission is to help organizations implement AI agents that can think, reason, and act autonomously to solve complex business challenges.
             </p>
             
-            <h3 className="text-2xl font-display font-semibold mb-4 text-zd-green">Our Approach</h3>
+            <h3 className="text-2xl font-display font-semibold mb-4 text-zd-teal">Our Approach</h3>
             <p className="text-lg text-zd-gray-dark mb-6">
-              We combine deep technical expertise with business acumen to deliver practical solutions. 
-              Our collaborative approach ensures that data and AI initiatives align with your 
-              business objectives and deliver measurable results.
+              We combine cutting-edge AI technology with deep business understanding to deliver practical solutions. 
+              Our collaborative approach ensures that AI implementations align with your strategic objectives and deliver measurable business value.
             </p>
             
             <Button 
-              className="bg-zd-green hover:bg-zd-green-dark"
+              className="bg-zd-teal hover:bg-zd-teal-dark"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              Learn More About Us
+              Learn More About Our AI Solutions
             </Button>
           </div>
         </div>

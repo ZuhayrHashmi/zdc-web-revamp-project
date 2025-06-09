@@ -5,6 +5,7 @@ import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import About from "@/components/About";
 import SuccessStories from "@/components/SuccessStories";
+import Articles from "@/components/Articles";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -31,7 +32,7 @@ const Index = () => {
     observeElements();
     
     // Update the document title
-    document.title = 'ZD Consultancy - Data Analytics & AI Solutions';
+    document.title = 'ZDConsultancy - Agentic AI & Business Intelligence Solutions';
   }, []);
   
   return (
@@ -42,6 +43,7 @@ const Index = () => {
         <Services />
         <About />
         <SuccessStories />
+        <Articles />
         <Contact />
       </main>
       <Footer />

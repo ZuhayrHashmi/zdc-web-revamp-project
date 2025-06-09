@@ -1,9 +1,14 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useEffect, useRef } from "react";
-import { BarChart, Database, FileText, Brain, LineChart, Users } from "lucide-react";
+import { Bot, Brain, Workflow, BarChart, Database, LineChart } from "lucide-react";
 
-const ServiceCard = ({ title, description, icon }: { title: string; description: string; icon: React.ReactNode }) => {
+const ServiceCard = ({ title, description, icon, isPrimary = false }: { 
+  title: string; 
+  description: string; 
+  icon: React.ReactNode; 
+  isPrimary?: boolean;
+}) => {
   const cardRef = useRef<HTMLDivElement>(null);
   
   useEffect(() => {
@@ -29,15 +34,25 @@ const ServiceCard = ({ title, description, icon }: { title: string; description:
   
   return (
     <div ref={cardRef} className="reveal">
-      <Card className="h-full border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
+      <Card className={`h-full border-none shadow-lg hover:shadow-xl transition-all duration-300 ${
+        isPrimary ? 'bg-zd-teal text-white transform scale-105' : 'bg-white'
+      }`}>
         <CardHeader className="flex flex-row items-center gap-4 pb-2">
-          <div className="bg-zd-blue/10 p-3 rounded-full text-zd-blue">
+          <div className={`p-3 rounded-full ${
+            isPrimary ? 'bg-white/20 text-white' : 'bg-zd-teal/10 text-zd-teal'
+          }`}>
             {icon}
           </div>
-          <CardTitle className="text-xl">{title}</CardTitle>
+          <CardTitle className={`text-xl ${isPrimary ? 'text-white' : 'text-zd-teal-dark'}`}>
+            {title}
+          </CardTitle>
         </CardHeader>
         <CardContent>
-          <CardDescription className="text-zd-gray text-base">{description}</CardDescription>
+          <CardDescription className={`text-base ${
+            isPrimary ? 'text-white/90' : 'text-zd-gray-dark'
+          }`}>
+            {description}
+          </CardDescription>
         </CardContent>
       </Card>
     </div>
@@ -70,34 +85,35 @@ const Services = () => {
   
   const services = [
     {
+      title: "Agentic AI Solutions",
+      description: "We design and implement intelligent AI agents that can reason, plan, and execute complex business tasks autonomously, transforming how your organization operates.",
+      icon: <Bot className="w-6 h-6" />,
+      isPrimary: true
+    },
+    {
+      title: "AI Workflow Automation",
+      description: "Create efficient AI-powered workflows that streamline operations, reduce manual tasks, and optimize business processes through intelligent automation.",
+      icon: <Workflow className="w-6 h-6" />
+    },
+    {
+      title: "Intelligent Decision Systems",
+      description: "Build AI systems that analyze complex data patterns and provide intelligent recommendations to enhance strategic decision-making capabilities.",
+      icon: <Brain className="w-6 h-6" />
+    },
+    {
       title: "Business Intelligence",
-      description: "We help organizations leverage their data to gain valuable insights, create interactive dashboards, and make data-driven business decisions.",
+      description: "Transform raw data into actionable insights with interactive dashboards and comprehensive analytics to drive data-driven business decisions.",
       icon: <BarChart className="w-6 h-6" />
     },
     {
       title: "Data Analytics",
-      description: "Our expert team provides comprehensive data analysis services, transforming raw data into actionable insights and valuable business intelligence.",
+      description: "Comprehensive data analysis services that uncover valuable insights, trends, and patterns to optimize business performance and strategy.",
       icon: <LineChart className="w-6 h-6" />
     },
     {
-      title: "AI Agent Solutions",
-      description: "We design and implement custom AI agents that automate tasks, analyze data, and provide intelligent recommendations tailored to your business needs.",
-      icon: <Brain className="w-6 h-6" />
-    },
-    {
       title: "Data Infrastructure",
-      description: "We build robust data infrastructure that ensures reliable data collection, storage, processing, and accessibility for all your business needs.",
+      description: "Build robust data infrastructure that ensures reliable data collection, storage, processing, and accessibility for all your business intelligence needs.",
       icon: <Database className="w-6 h-6" />
-    },
-    {
-      title: "Data Strategy Consulting",
-      description: "Our consultants help develop comprehensive data strategies aligned with your business objectives to maximize the value of your data assets.",
-      icon: <FileText className="w-6 h-6" />
-    },
-    {
-      title: "AI Workflow Design",
-      description: "We create efficient AI-powered workflows that streamline operations, reduce manual tasks, and optimize business processes.",
-      icon: <Users className="w-6 h-6" />
     }
   ];
 
@@ -105,9 +121,9 @@ const Services = () => {
     <section id="services" className="section-padding bg-white">
       <div className="container mx-auto">
         <div ref={sectionRef} className="text-center mb-12 reveal">
-          <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-zd-blue">Our Services</h2>
+          <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-zd-teal-dark">Our Services</h2>
           <p className="text-lg text-zd-gray-dark max-w-3xl mx-auto">
-            We offer comprehensive data analytics and AI solutions to help your organization make smarter decisions and optimize operations.
+            We specialize in cutting-edge Agentic AI solutions, complemented by comprehensive business intelligence and data analytics services.
           </p>
         </div>
         
@@ -118,6 +134,7 @@ const Services = () => {
               title={service.title}
               description={service.description}
               icon={service.icon}
+              isPrimary={service.isPrimary}
             />
           ))}
         </div>

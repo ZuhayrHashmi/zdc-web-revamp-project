@@ -24,6 +24,7 @@ const Header = () => {
     { name: 'Home', href: '#' },
     { name: 'Services', href: '#services' },
     { name: 'About', href: '#about' },
+    { name: 'Articles', href: '#articles' },
     { name: 'Contact', href: '#contact' }
   ];
 
@@ -33,8 +34,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           <div className="flex-shrink-0">
             <a href="#" className="flex items-center">
-              <span className="text-2xl font-display font-bold text-zd-teal">ZD</span>
-              <span className="ml-2 text-xl font-display font-medium text-zd-gray">Consultancy</span>
+              <span className="text-2xl font-display font-bold text-zd-teal">ZDConsultancy</span>
             </a>
           </div>
           
