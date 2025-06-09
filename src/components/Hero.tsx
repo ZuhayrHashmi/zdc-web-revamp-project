@@ -4,7 +4,7 @@ import { ChevronDown } from "lucide-react";
 
 const Hero = () => {
   const scrollToServices = () => {
-    document.getElementById('services')?.scrollIntoView({ behaviour: 'smooth' });
+    document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -29,7 +29,7 @@ const Hero = () => {
             <Button 
               size="lg" 
               className="bg-zd-teal hover:bg-zd-teal-dark text-white"
-              onClick={() => document.getElementById('contact')?.scrollIntoView({ behaviour: 'smooth' })}
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Request AI Consultation
             </Button>
@@ -37,7 +37,7 @@ const Hero = () => {
               size="lg" 
               variant="outline" 
               className="border-zd-teal text-zd-teal hover:bg-zd-teal/10"
-              onClick={() => document.getElementById('services')?.scrollIntoView({ behaviour: 'smooth' })}
+              onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Explore AI Solutions
             </Button>

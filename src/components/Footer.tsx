@@ -3,16 +3,16 @@ import { Facebook, Linkedin, Twitter } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-zd-gray-dark text-white">
+    <footer className="bg-zd-teal-dark text-white">
       <div className="container mx-auto py-12 px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center mb-6">
-              <span className="text-2xl font-display font-bold text-zd-teal">ZDConsultancy</span>
+              <span className="text-2xl font-display font-bold text-zd-teal-light">ZDConsultancy</span>
             </div>
             <p className="text-gray-300 mb-6">
               Transforming business through Agentic AI solutions. 
-              Expert AI consulting for intelligent automation and data-driven decision making.
+              Expert AI consultancy for intelligent automation and data-driven decision making.
             </p>
             <div className="flex space-x-4">
               <a 
@@ -45,7 +45,7 @@ const Footer = () => {
               <li><a href="#services" className="text-gray-300 hover:text-white transition-colors">Agentic AI Solutions</a></li>
               <li><a href="#services" className="text-gray-300 hover:text-white transition-colors">Business Intelligence</a></li>
               <li><a href="#services" className="text-gray-300 hover:text-white transition-colors">Data Analytics</a></li>
-              <li><a href="#services" className="text-gray-300 hover:text-white transition-colors">AI Consulting</a></li>
+              <li><a href="#services" className="text-gray-300 hover:text-white transition-colors">AI Consultancy</a></li>
             </ul>
           </div>
           
@@ -70,7 +70,7 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-gray-600 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
             &copy; {new Date().getFullYear()} ZDConsultancy. All rights reserved.
           </p>
