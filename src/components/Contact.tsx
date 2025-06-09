@@ -11,6 +11,8 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    address: "",
+    phone: "",
     company: "",
     message: ""
   });
@@ -57,6 +59,8 @@ const Contact = () => {
       setFormData({
         name: "",
         email: "",
+        address: "",
+        phone: "",
         company: "",
         message: ""
       });
@@ -74,7 +78,7 @@ const Contact = () => {
         <div ref={sectionRef} className="text-center mb-12 reveal">
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-zd-blue">Get In Touch</h2>
           <p className="text-lg text-zd-gray-dark max-w-3xl mx-auto">
-            Ready to start your sustainability journey? Contact us today for a consultation.
+            Ready to start your AI transformation journey? Contact us today for a consultation.
           </p>
         </div>
         
@@ -83,13 +87,13 @@ const Contact = () => {
             <form onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div className="space-y-2">
-                  <Label htmlFor="name">Your Name</Label>
+                  <Label htmlFor="name">Name</Label>
                   <Input
                     id="name"
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    placeholder="John Doe"
+                    placeholder="John Smith"
                     required
                   />
                 </div>
@@ -101,21 +105,45 @@ const Contact = () => {
                     type="email"
                     value={formData.email}
                     onChange={handleChange}
-                    placeholder="john@example.com"
+                    placeholder="john@example.co.uk"
                     required
                   />
                 </div>
               </div>
               
               <div className="space-y-2 mb-6">
-                <Label htmlFor="company">Company</Label>
+                <Label htmlFor="address">Address</Label>
                 <Input
-                  id="company"
-                  name="company"
-                  value={formData.company}
+                  id="address"
+                  name="address"
+                  value={formData.address}
                   onChange={handleChange}
-                  placeholder="Your Company"
+                  placeholder="123 Business Street, London, EC1A 1AA"
                 />
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div className="space-y-2">
+                  <Label htmlFor="phone">Phone Number</Label>
+                  <Input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    placeholder="+44 20 1234 5678"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="company">Company</Label>
+                  <Input
+                    id="company"
+                    name="company"
+                    value={formData.company}
+                    onChange={handleChange}
+                    placeholder="Your Company Ltd"
+                  />
+                </div>
               </div>
               
               <div className="space-y-2 mb-6">
@@ -125,7 +153,7 @@ const Contact = () => {
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  placeholder="Tell us about your project or inquiry..."
+                  placeholder="Tell us about your project or enquiry..."
                   className="min-h-[150px]"
                   required
                 />
@@ -151,7 +179,7 @@ const Contact = () => {
                     <MapPin className="mr-4 h-6 w-6 shrink-0" />
                     <div>
                       <p className="font-medium">Address</p>
-                      <p className="mt-1 opacity-80">123 Sustainability Avenue</p>
+                      <p className="mt-1 opacity-80">123 AI Innovation Street</p>
                       <p className="opacity-80">London, EC1A 1AA</p>
                     </div>
                   </div>
@@ -168,7 +196,7 @@ const Contact = () => {
                     <Mail className="mr-4 h-6 w-6 shrink-0" />
                     <div>
                       <p className="font-medium">Email</p>
-                      <p className="mt-1 opacity-80">info@zdconsultancy.com</p>
+                      <p className="mt-1 opacity-80">info@zdconsultancy.co.uk</p>
                     </div>
                   </div>
                 </div>

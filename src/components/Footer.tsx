@@ -8,12 +8,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center mb-6">
-              <span className="text-2xl font-display font-bold text-white">ZD</span>
-              <span className="ml-2 text-xl font-display font-medium text-gray-300">Consultancy</span>
+              <span className="text-2xl font-display font-bold text-zd-teal">ZDConsultancy</span>
             </div>
             <p className="text-gray-300 mb-6">
-              Transforming business through sustainable solutions. 
-              Expert ESG consulting for a better future.
+              Transforming business through Agentic AI solutions. 
+              Expert AI consulting for intelligent automation and data-driven decision making.
             </p>
             <div className="flex space-x-4">
               <a 
@@ -43,10 +42,10 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-display font-semibold mb-6">Services</h3>
             <ul className="space-y-3">
-              <li><a href="#services" className="text-gray-300 hover:text-white transition-colors">ESG Strategy</a></li>
-              <li><a href="#services" className="text-gray-300 hover:text-white transition-colors">Sustainability Reporting</a></li>
-              <li><a href="#services" className="text-gray-300 hover:text-white transition-colors">Carbon Management</a></li>
-              <li><a href="#services" className="text-gray-300 hover:text-white transition-colors">Supply Chain Solutions</a></li>
+              <li><a href="#services" className="text-gray-300 hover:text-white transition-colors">Agentic AI Solutions</a></li>
+              <li><a href="#services" className="text-gray-300 hover:text-white transition-colors">Business Intelligence</a></li>
+              <li><a href="#services" className="text-gray-300 hover:text-white transition-colors">Data Analytics</a></li>
+              <li><a href="#services" className="text-gray-300 hover:text-white transition-colors">AI Consulting</a></li>
             </ul>
           </div>
           
@@ -63,7 +62,7 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-display font-semibold mb-6">Resources</h3>
             <ul className="space-y-3">
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Blog</a></li>
+              <li><a href="#articles" className="text-gray-300 hover:text-white transition-colors">Articles</a></li>
               <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Case Studies</a></li>
               <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Research</a></li>
               <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Insights</a></li>
@@ -73,7 +72,7 @@ const Footer = () => {
         
         <div className="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            &copy; {new Date().getFullYear()} ZD Consultancy. All rights reserved.
+            &copy; {new Date().getFullYear()} ZDConsultancy. All rights reserved.
           </p>
           <div className="mt-4 md:mt-0 flex space-x-6 text-sm text-gray-400">
             <a href="#" className="hover:text-gray-300 transition-colors">Privacy Policy</a>
