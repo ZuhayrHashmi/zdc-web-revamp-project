@@ -1,6 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
+import BlurText from "./BlurText";
 
 const Hero = () => {
   const scrollToServices = () => {
@@ -16,14 +17,21 @@ const Hero = () => {
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 text-zd-teal">
-            Transforming Business Through 
-            <span className="text-zd-teal-medium"> Agentic AI Solutions</span>
-          </h1>
+          <BlurText
+            text="Transforming Business Through Agentic AI Solutions"
+            className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 text-zd-teal"
+            delay={100}
+            animateBy="words"
+            direction="top"
+          />
           
-          <p className="text-lg md:text-xl mb-8 text-zd-gray-dark max-w-3xl mx-auto">
-            ZDConsultancy specialises in intelligent AI agents that automate workflows, enhance decision-making, and optimise business processes. We also provide comprehensive business intelligence and data analytics solutions.
-          </p>
+          <BlurText
+            text="ZDConsultancy specialises in intelligent AI agents that automate workflows, enhance decision-making, and optimise business processes. We also provide comprehensive business intelligence and data analytics solutions."
+            className="text-lg md:text-xl mb-8 text-zd-gray-dark max-w-3xl mx-auto"
+            delay={150}
+            animateBy="words"
+            direction="bottom"
+          />
           
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Button 
