@@ -1,4 +1,3 @@
-
 import { useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight, TrendingUp, Zap, DollarSign } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -138,8 +137,9 @@ const SuccessStories = () => {
         </div>
         
         <div ref={storiesRef} className="relative max-w-6xl mx-auto reveal">
-          <div className="relative bg-gradient-to-br from-zd-teal to-zd-teal-dark text-white p-8 md:p-12 rounded-xl shadow-2xl">
-            <div className="absolute top-6 right-6 flex items-center gap-4 text-white/80">
+          <div className="relative bg-gradient-to-br from-zd-teal to-zd-teal-dark text-white p-6 md:p-8 lg:p-12 rounded-xl shadow-2xl">
+            {/* Industry and tools info - hidden on mobile */}
+            <div className="absolute top-6 right-6 hidden md:flex items-center gap-4 text-white/80">
               <div className="text-right">
                 <div className="text-sm font-medium">{currentStory.industry}</div>
                 <div className="text-xs">{currentStory.tools}</div>
@@ -151,25 +151,25 @@ const SuccessStories = () => {
             
             <div className="relative z-10 min-h-[500px] flex flex-col">
               <div className="mb-8">
-                <h3 className="text-3xl font-bold mb-2">{currentStory.title}</h3>
-                <h4 className="text-xl text-white/90 mb-4">{currentStory.subtitle}</h4>
-                <p className="text-lg text-white/95">{currentStory.description}</p>
+                <h3 className="text-2xl md:text-3xl font-bold mb-2">{currentStory.title}</h3>
+                <h4 className="text-lg md:text-xl text-white/90 mb-4">{currentStory.subtitle}</h4>
+                <p className="text-base md:text-lg text-white/95">{currentStory.description}</p>
               </div>
               
-              <div className="grid md:grid-cols-2 gap-8 flex-1">
+              <div className="grid md:grid-cols-2 gap-6 md:gap-8 flex-1">
                 <div className="space-y-6">
-                  <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm">
+                  <div className="bg-white/10 p-4 md:p-6 rounded-lg backdrop-blur-sm">
                     <h5 className="text-lg font-semibold mb-3 text-white">Challenge</h5>
                     <p className="text-white/90 text-sm leading-relaxed">{currentStory.challenge}</p>
                   </div>
                   
-                  <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm">
+                  <div className="bg-white/10 p-4 md:p-6 rounded-lg backdrop-blur-sm">
                     <h5 className="text-lg font-semibold mb-3 text-white">Solution</h5>
                     <p className="text-white/90 text-sm leading-relaxed">{currentStory.solution}</p>
                   </div>
                 </div>
                 
-                <div className="bg-white/15 p-6 rounded-lg backdrop-blur-sm">
+                <div className="bg-white/15 p-4 md:p-6 rounded-lg backdrop-blur-sm">
                   <h5 className="text-lg font-semibold mb-4 text-white">Results</h5>
                   <div className="space-y-4">
                     {currentStory.results.map((result, index) => (

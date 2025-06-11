@@ -68,7 +68,7 @@ const Header = () => {
         
         {/* Mobile navigation */}
         {isOpen && (
-          <div className="md:hidden mt-4 pb-4">
+          <div className="md:hidden mt-4 pb-4 bg-white/95 backdrop-blur-sm rounded-lg shadow-lg -mx-4 px-4">
             <div className="flex flex-col space-y-4">
               {navLinks.map((link) => (
                 <a

@@ -53,8 +53,7 @@ const Footer = () => {
             <h3 className="text-lg font-display font-semibold mb-6">Company</h3>
             <ul className="space-y-3">
               <li><a href="#about" className="text-gray-300 hover:text-white transition-colors">About Us</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Our Team</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Careers</a></li>
+              <li><a href="#success-stories" className="text-gray-300 hover:text-white transition-colors">Success Stories</a></li>
               <li><a href="#contact" className="text-gray-300 hover:text-white transition-colors">Contact Us</a></li>
             </ul>
           </div>
@@ -63,9 +62,9 @@ const Footer = () => {
             <h3 className="text-lg font-display font-semibold mb-6">Resources</h3>
             <ul className="space-y-3">
               <li><a href="#articles" className="text-gray-300 hover:text-white transition-colors">Articles</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Case Studies</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Research</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Insights</a></li>
+              <li><a href="#success-stories" className="text-gray-300 hover:text-white transition-colors">Case Studies</a></li>
+              <li><a href="#services" className="text-gray-300 hover:text-white transition-colors">Solutions</a></li>
+              <li><a href="#about" className="text-gray-300 hover:text-white transition-colors">Insights</a></li>
             </ul>
           </div>
         </div>
