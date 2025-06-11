@@ -5,11 +5,11 @@ import { useEffect, useRef, useState } from 'react';
 const SplitText = ({
   text = '',
   className = '',
-  delay = 100,
-  duration = 0.6,
+  delay = 50,
+  duration = 0.3,
   ease = "power3.out",
   splitType = 'chars',
-  from = { opacity: 0, y: 40 },
+  from = { opacity: 0, y: 20 },
   to = { opacity: 1, y: 0 },
   threshold = 0.1,
   rootMargin = '-100px',
@@ -42,14 +42,12 @@ const SplitText = ({
   };
 
   return (
-    <p
+    <div
       ref={ref}
       className={className}
       style={{ 
-        display: 'flex', 
-        flexWrap: 'wrap',
-        textAlign: textAlign,
-        justifyContent: textAlign === 'center' ? 'center' : 'flex-start'
+        textAlign: textAlign as any,
+        lineHeight: '1.6'
       }}
     >
       {elements.map((char, index) => (
@@ -70,7 +68,7 @@ const SplitText = ({
           {char === ' ' ? '\u00A0' : char}
         </motion.span>
       ))}
-    </p>
+    </div>
   );
 };
 

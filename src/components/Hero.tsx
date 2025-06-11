@@ -28,16 +28,22 @@ const Hero = () => {
             delay={100}
             animateBy="words"
             direction="top"
+            animationFrom={{ filter: 'blur(10px)', opacity: 0, y: -50 }}
+            animationTo={[
+              { filter: 'blur(5px)', opacity: 0.5, y: 5 },
+              { filter: 'blur(0px)', opacity: 1, y: 0 }
+            ]}
+            onAnimationComplete={() => {}}
           />
           
           <SplitText
             text="ZDConsultancy specialises in intelligent AI agents that automate workflows, enhance decision-making, and optimise business processes. We also provide comprehensive business intelligence and data analytics solutions."
             className="text-lg md:text-xl mb-8 text-zd-gray-dark max-w-3xl mx-auto"
-            delay={100}
-            duration={0.6}
-            ease="power3.out"
+            delay={30}
+            duration={0.4}
+            ease="power2.out"
             splitType="chars"
-            from={{ opacity: 0, y: 40 }}
+            from={{ opacity: 0, y: 15 }}
             to={{ opacity: 1, y: 0 }}
             threshold={0.1}
             rootMargin="-100px"
