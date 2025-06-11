@@ -2,10 +2,15 @@
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
 import BlurText from "./BlurText";
+import SplitText from "./SplitText";
 
 const Hero = () => {
   const scrollToServices = () => {
     document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const handleAnimationComplete = () => {
+    console.log('All letters have animated!');
   };
 
   return (
@@ -25,12 +30,19 @@ const Hero = () => {
             direction="top"
           />
           
-          <BlurText
+          <SplitText
             text="ZDConsultancy specialises in intelligent AI agents that automate workflows, enhance decision-making, and optimise business processes. We also provide comprehensive business intelligence and data analytics solutions."
             className="text-lg md:text-xl mb-8 text-zd-gray-dark max-w-3xl mx-auto"
-            delay={150}
-            animateBy="words"
-            direction="bottom"
+            delay={100}
+            duration={0.6}
+            ease="power3.out"
+            splitType="chars"
+            from={{ opacity: 0, y: 40 }}
+            to={{ opacity: 1, y: 0 }}
+            threshold={0.1}
+            rootMargin="-100px"
+            textAlign="center"
+            onLetterAnimationComplete={handleAnimationComplete}
           />
           
           <div className="flex flex-col sm:flex-row justify-center gap-4">
