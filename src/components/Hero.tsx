@@ -26,9 +26,9 @@ const Hero = () => {
           />
           
           <BlurText
-            text="ZDConsultancy specialises in intelligent AI agents that automate workflows, enhance decision-making, and optimise business processes. We also provide comprehensive business intelligence and data analytics solutions."
-            className="text-lg md:text-xl mb-8 text-zd-gray-dark max-w-3xl mx-auto"
-            delay={150}
+            text="Zynapse specialises in intelligent AI agents that automate workflows, enhance decision-making, and optimise business processes. We also provide comprehensive business intelligence and data analytics solutions."
+            className="text-lg md:text-xl mb-8 text-zd-gray-dark max-w-3xl mx-auto text-center"
+            delay={50}
             animateBy="words"
             direction="bottom"
           />

@@ -34,7 +34,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           <div className="flex-shrink-0">
             <a href="#" className="flex items-center">
-              <span className="text-2xl font-display font-bold text-zd-teal">ZDConsultancy</span>
+              <span className="text-2xl font-display font-bold text-zd-teal">Zynapse</span>
             </a>
           </div>
           

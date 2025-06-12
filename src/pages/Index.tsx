@@ -32,7 +32,7 @@ const Index = () => {
     observeElements();
     
     // Update the document title
-    document.title = 'ZDConsultancy - Agentic AI & Business Intelligence Solutions';
+    document.title = 'Zynapse - Agentic AI & Business Intelligence Solutions';
   }, []);
   
   return (

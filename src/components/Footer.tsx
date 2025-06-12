@@ -1,4 +1,3 @@
-
 import { Facebook, Linkedin, Twitter } from "lucide-react";
 
 const Footer = () => {
@@ -8,7 +7,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center mb-6">
-              <span className="text-2xl font-display font-bold text-zd-teal-light">ZDConsultancy</span>
+              <span className="text-2xl font-display font-bold text-zd-teal-light">Zynapse</span>
             </div>
             <p className="text-gray-300 mb-6">
               Transforming business through Agentic AI solutions. 
@@ -71,7 +70,7 @@ const Footer = () => {
         
         <div className="border-t border-gray-600 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            &copy; {new Date().getFullYear()} ZDConsultancy. All rights reserved.
+            &copy; {new Date().getFullYear()} Zynapse. All rights reserved.
           </p>
           <div className="mt-4 md:mt-0 flex space-x-6 text-sm text-gray-400">
             <a href="#" className="hover:text-gray-300 transition-colors">Privacy Policy</a>

@@ -32,7 +32,7 @@ const About = () => {
     <section id="about" className="section-padding bg-zd-background-light">
       <div className="container mx-auto">
         <div ref={sectionRef} className="text-center mb-12 reveal">
-          <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-zd-teal-dark">About ZDConsultancy</h2>
+          <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-zd-teal-dark">About Zynapse</h2>
           <p className="text-lg text-zd-gray-dark max-w-3xl mx-auto">
             We are dedicated to helping organizations harness the power of Agentic AI and intelligent data solutions.
           </p>
@@ -56,7 +56,7 @@ const About = () => {
           <div ref={contentRef} className="reveal">
             <h3 className="text-2xl font-display font-semibold mb-4 text-zd-teal">Our Mission</h3>
             <p className="text-lg text-zd-gray-dark mb-6">
-              ZDConsultancy was founded with a vision to transform how businesses leverage Agentic AI and intelligent automation. 
+              Zynapse was founded with a vision to transform how businesses leverage Agentic AI and intelligent automation. 
               Our mission is to help organizations implement AI agents that can think, reason, and act autonomously to solve complex business challenges.
             </p>
             

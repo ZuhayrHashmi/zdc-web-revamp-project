@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -196,7 +195,7 @@ const Contact = () => {
                     <Mail className="mr-4 h-6 w-6 shrink-0" />
                     <div>
                       <p className="font-medium">Email</p>
-                      <p className="mt-1 opacity-80">info@zdconsultancy.co.uk</p>
+                      <p className="mt-1 opacity-80">info@zynapse.co.uk</p>
                     </div>
                   </div>
                 </div>
