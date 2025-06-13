@@ -82,7 +82,7 @@ const Contact = () => {
         </div>
         
         <div className="max-w-6xl mx-auto flex justify-center">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-full ">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max">
             <div ref={formRef} className="bg-white shadow-lg rounded-lg p-8 reveal px-[32px]">
               <form onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
