@@ -33,7 +33,7 @@ const Hero = () => {
             direction="bottom"
           />
           
-          <div className="flex flex-col sm:flex-row justify-start gap-4">
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Button 
               size="lg" 
               className="bg-zd-teal hover:bg-zd-teal-dark text-white"

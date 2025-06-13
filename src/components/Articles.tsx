@@ -35,41 +35,25 @@ const Articles = () => {
   
   const articles: Article[] = [
     {
-      title: "The Future of Agentic AI in Business Automation",
-      excerpt: "Discover how autonomous AI agents are revolutionizing business processes by making intelligent decisions without human intervention.",
+      title: "Data-Driven Decision-Making: A Game-Changer for Your Business",
+      excerpt: "In today's data-driven world, relying on intuition or guesswork is no longer enough. Data-driven decision-making (DDDM) is about leveraging insights from data to guide strategies, optimise operations, and outperform competitors.",
       date: "Dec 15, 2024",
-      readTime: "5 min read",
-      category: "Agentic AI",
-      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80"
-    },
-    {
-      title: "Building Intelligent Workflows with AI Agents",
-      excerpt: "Learn how to design and implement AI-powered workflows that can adapt, learn, and optimize business operations in real-time.",
-      date: "Dec 10, 2024",
-      readTime: "7 min read",
-      category: "AI Workflows",
-      image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&q=80"
-    },
-    {
-      title: "Data-Driven Decision Making in the AI Era",
-      excerpt: "Explore how modern businesses are leveraging AI-enhanced analytics to make faster, more accurate strategic decisions.",
-      date: "Dec 5, 2024",
-      readTime: "6 min read",
+      readTime: "8 min read",
       category: "Business Intelligence",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80"
     },
     {
-      title: "Transforming Customer Experience with AI Agents",
-      excerpt: "See how intelligent AI agents are personalizing customer interactions and improving satisfaction across industries.",
-      date: "Nov 28, 2024",
-      readTime: "4 min read",
-      category: "Customer Experience",
-      image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80"
+      title: "In-House vs. Outsourced Data Analytics: A Critical Business Decision",
+      excerpt: "In today's data-centric business environment, organisations face a critical decision: should they develop an in-house analytics team or outsource their data analytics needs? This choice significantly impacts cost, expertise, scalability, and strategic alignment.",
+      date: "Dec 10, 2024",
+      readTime: "12 min read",
+      category: "Data Strategy",
+      image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&q=80"
     }
   ];
   
   return (
-    <section id="articles" className="section-padding bg-white">
+    <section id="articles" className="section-padding bg-zd-background-light">
       <div className="container mx-auto">
         <div ref={sectionRef} className="text-center mb-12 reveal">
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-zd-teal-dark">Latest Articles & Insights</h2>
@@ -82,7 +66,7 @@ const Articles = () => {
           <Carousel className="w-full">
             <CarouselContent className="-ml-2 md:-ml-4">
               {articles.map((article, index) => (
-                <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/2">
                   <Card className="h-full border-none shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white">
                     <div className="relative overflow-hidden rounded-t-lg">
                       <img 
