@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -5,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -15,42 +17,37 @@ const Contact = () => {
     message: ""
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const {
-    toast
-  } = useToast();
+  const { toast } = useToast();
   const sectionRef = useRef<HTMLDivElement>(null);
   const formRef = useRef<HTMLDivElement>(null);
-  const contactInfoRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add('active');
           observer.unobserve(entry.target);
         }
       });
-    }, {
-      threshold: 0.1
-    });
+    }, { threshold: 0.1 });
+
     if (sectionRef.current) observer.observe(sectionRef.current);
     if (formRef.current) observer.observe(formRef.current);
-    if (contactInfoRef.current) observer.observe(contactInfoRef.current);
+
     return () => {
       if (sectionRef.current) observer.unobserve(sectionRef.current);
       if (formRef.current) observer.unobserve(formRef.current);
-      if (contactInfoRef.current) observer.unobserve(contactInfoRef.current);
     };
   }, []);
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const {
-      name,
-      value
-    } = e.target;
+    const { name, value } = e.target;
     setFormData(prevState => ({
       ...prevState,
       [name]: value
     }));
   };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -72,7 +69,9 @@ const Contact = () => {
       });
     }, 1500);
   };
-  return <section id="contact" className="section-padding bg-white">
+
+  return (
+    <section id="contact" className="section-padding bg-white">
       <div className="container mx-auto">
         <div ref={sectionRef} className="text-center mb-12 reveal">
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-zd-blue">Get In Touch</h2>
@@ -81,52 +80,96 @@ const Contact = () => {
           </p>
         </div>
         
-        <div className="max-w-6xl mx-auto flex justify-center">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max">
-            <div ref={formRef} className="bg-white shadow-lg rounded-lg p-8 reveal px-[32px]">
-              <form onSubmit={handleSubmit}>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                  <div className="space-y-2">
-                    <Label htmlFor="name">Name</Label>
-                    <Input id="name" name="name" value={formData.name} onChange={handleChange} placeholder="John Smith" required />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="email">Email Address</Label>
-                    <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} placeholder="john@example.co.uk" required />
-                  </div>
+        <div className="flex justify-center">
+          <div ref={formRef} className="bg-white shadow-lg rounded-lg p-8 reveal w-full max-w-2xl">
+            <form onSubmit={handleSubmit}>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div className="space-y-2">
+                  <Label htmlFor="name">Name</Label>
+                  <Input 
+                    id="name" 
+                    name="name" 
+                    value={formData.name} 
+                    onChange={handleChange} 
+                    placeholder="John Smith" 
+                    required 
+                  />
                 </div>
-                
-                <div className="space-y-2 mb-6">
-                  <Label htmlFor="address">Address</Label>
-                  <Input id="address" name="address" value={formData.address} onChange={handleChange} placeholder="123 Business Street, London, EC1A 1AA" />
+                <div className="space-y-2">
+                  <Label htmlFor="email">Email Address</Label>
+                  <Input 
+                    id="email" 
+                    name="email" 
+                    type="email" 
+                    value={formData.email} 
+                    onChange={handleChange} 
+                    placeholder="john@example.co.uk" 
+                    required 
+                  />
                 </div>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                  <div className="space-y-2">
-                    <Label htmlFor="phone">Phone Number</Label>
-                    <Input id="phone" name="phone" type="tel" value={formData.phone} onChange={handleChange} placeholder="+44 20 1234 5678" />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="company">Company</Label>
-                    <Input id="company" name="company" value={formData.company} onChange={handleChange} placeholder="Your Company Ltd" />
-                  </div>
+              </div>
+              
+              <div className="space-y-2 mb-6">
+                <Label htmlFor="address">Address</Label>
+                <Input 
+                  id="address" 
+                  name="address" 
+                  value={formData.address} 
+                  onChange={handleChange} 
+                  placeholder="123 Business Street, London, EC1A 1AA" 
+                />
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div className="space-y-2">
+                  <Label htmlFor="phone">Phone Number</Label>
+                  <Input 
+                    id="phone" 
+                    name="phone" 
+                    type="tel" 
+                    value={formData.phone} 
+                    onChange={handleChange} 
+                    placeholder="+44 20 1234 5678" 
+                  />
                 </div>
-                
-                <div className="space-y-2 mb-6">
-                  <Label htmlFor="message">Message</Label>
-                  <Textarea id="message" name="message" value={formData.message} onChange={handleChange} placeholder="Tell us about your project or enquiry..." className="min-h-[150px]" required />
+                <div className="space-y-2">
+                  <Label htmlFor="company">Company</Label>
+                  <Input 
+                    id="company" 
+                    name="company" 
+                    value={formData.company} 
+                    onChange={handleChange} 
+                    placeholder="Your Company Ltd" 
+                  />
                 </div>
-                
-                <Button type="submit" className="w-full bg-zd-blue hover:bg-zd-blue-dark" disabled={isSubmitting}>
-                  {isSubmitting ? "Sending..." : "Send Message"}
-                </Button>
-              </form>
-            </div>
-            
-            
+              </div>
+              
+              <div className="space-y-2 mb-6">
+                <Label htmlFor="message">Message</Label>
+                <Textarea 
+                  id="message" 
+                  name="message" 
+                  value={formData.message} 
+                  onChange={handleChange} 
+                  placeholder="Tell us about your project or enquiry..." 
+                  className="min-h-[150px]" 
+                  required 
+                />
+              </div>
+              
+              <Button 
+                type="submit" 
+                className="w-full bg-zd-blue hover:bg-zd-blue-dark" 
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? "Sending..." : "Send Message"}
+              </Button>
+            </form>
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Contact;
