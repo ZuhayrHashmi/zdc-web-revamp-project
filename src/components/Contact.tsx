@@ -62,7 +62,7 @@ const Contact = () => {
     };
 
     try {
-      await fetch("https://script.google.com/a/macros/zynapse.co.uk/s/AKfycbwS6fXdKpMEV3QHqxlZL96r1N2Au_xNdbU88LbXh1189RnIaWudurKJquQg3P81kPsibA/exec", {
+      await fetch("https://script.google.com/macros/s/AKfycbwS6fXdKpMEV3QHqxlZL96r1N2Au_xNdbU88LbXh1189RnIaWudurKJquQg3P81kPsibA/exec", {
         method: "POST",
         mode: "no-cors",  // Because Google Apps Script doesn’t support CORS
         headers: {
