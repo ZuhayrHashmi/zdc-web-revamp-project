@@ -74,7 +74,7 @@ const Contact = () => {
     <section id="contact" className="section-padding bg-white">
       <div className="container mx-auto">
         <div ref={sectionRef} className="text-center mb-12 reveal">
-          <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-zd-blue">Get In Touch</h2>
+          <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-zd-teal">Get In Touch</h2>
           <p className="text-lg text-zd-gray-dark max-w-3xl mx-auto">
             Ready to start your AI transformation journey? Contact us today for a consultation.
           </p>
@@ -159,7 +159,7 @@ const Contact = () => {
               
               <Button 
                 type="submit" 
-                className="w-full bg-zd-blue hover:bg-zd-blue-dark" 
+                className="w-full bg-zd-teal hover:bg-zd-teal-dark text-white" 
                 disabled={isSubmitting}
               >
                 {isSubmitting ? "Sending..." : "Send Message"}
