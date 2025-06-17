@@ -48,12 +48,30 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
+    const formDataToSend = {
+      name: formData.name,
+      email: formData.email,
+      address: formData.address,
+      phone: formData.phone,
+      company: formData.company,
+      message: formData.message
+    };
+
+    try {
+      await fetch("https://script.google.com/a/macros/zynapse.co.uk/s/AKfycbwg_qt02MdEhK8vn0N0zdmcy_ZlUZLq2z9XbFJUSkKM26h17HFgGkRfVDvSsx7PqDWjkw/exec", {
+        method: "POST",
+        mode: "no-cors",  // Because Google Apps Script doesn’t support CORS
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: new URLSearchParams(formDataToSend).toString(),
+      });
+
+      // We assume success because no-cors mode blocks response access
       setIsSubmitting(false);
       setFormData({
         name: "",
@@ -65,10 +83,19 @@ const Contact = () => {
       });
       toast({
         title: "Message Sent",
-        description: "We'll get back to you as soon as possible."
+        description: "We'll get back to you as soon as possible.",
       });
-    }, 1500);
+
+    } catch (error) {
+      setIsSubmitting(false);
+      toast({
+        title: "Error",
+        description: "There was a problem sending your message. Please try again later.",
+        variant: "destructive"
+      });
+    }
   };
+
 
   return (
     <section id="contact" className="section-padding bg-white">
