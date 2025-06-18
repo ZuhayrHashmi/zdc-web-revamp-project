@@ -34,7 +34,7 @@ const About = () => {
         <div ref={sectionRef} className="text-center mb-12 reveal">
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-zd-teal-dark">About Zynapse</h2>
           <p className="text-lg text-zd-gray-dark max-w-3xl mx-auto">
-            We are dedicated to helping organizations harness the power of Agentic AI and intelligent data solutions.
+            We are dedicated to helping organisations harness the power of Agentic AI and intelligent data solutions.
           </p>
         </div>
         
@@ -57,7 +57,7 @@ const About = () => {
             <h3 className="text-2xl font-display font-semibold mb-4 text-zd-teal">Our Mission</h3>
             <p className="text-lg text-zd-gray-dark mb-6">
               Zynapse was founded with a vision to transform how businesses leverage Agentic AI and intelligent automation. 
-              Our mission is to help organizations implement AI agents that can think, reason, and act autonomously to solve complex business challenges.
+              Our mission is to help organisations implement AI agents that can think, reason, and act autonomously to solve complex business challenges.
             </p>
             
             <h3 className="text-2xl font-display font-semibold mb-4 text-zd-teal">Our Approach</h3>

@@ -1,7 +1,6 @@
 
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -60,9 +59,6 @@ const Header = () => {
                 {link.name}
               </a>
             ))}
-            <Button className="bg-zd-teal hover:bg-zd-teal-dark ml-4">
-              Get in Touch
-            </Button>
           </nav>
         </div>
         
@@ -80,15 +76,6 @@ const Header = () => {
                   {link.name}
                 </a>
               ))}
-              <Button 
-                className="bg-zd-teal hover:bg-zd-teal-dark w-full mt-2"
-                onClick={() => {
-                  setIsOpen(false);
-                  window.location.href = "#contact";
-                }}
-              >
-                Get in Touch
-              </Button>
             </div>
           </div>
         )}

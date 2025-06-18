@@ -86,18 +86,18 @@ const Services = () => {
   const services = [
     {
       title: "Agentic AI Solutions",
-      description: "We design and implement intelligent AI agents that can reason, plan, and execute complex business tasks autonomously, transforming how your organization operates.",
+      description: "We design and implement intelligent AI agents that can reason, plan, and execute complex business tasks autonomously, transforming how your organisation operates.",
       icon: <Bot className="w-6 h-6" />,
       isPrimary: true
     },
     {
       title: "AI Workflow Automation",
-      description: "Create efficient AI-powered workflows that streamline operations, reduce manual tasks, and optimize business processes through intelligent automation.",
+      description: "Create efficient AI-powered workflows that streamline operations, reduce manual tasks, and optimise business processes through intelligent automation.",
       icon: <Workflow className="w-6 h-6" />
     },
     {
       title: "Intelligent Decision Systems",
-      description: "Build AI systems that analyze complex data patterns and provide intelligent recommendations to enhance strategic decision-making capabilities.",
+      description: "Build AI systems that analyse complex data patterns and provide intelligent recommendations to enhance strategic decision-making capabilities.",
       icon: <Brain className="w-6 h-6" />
     },
     {
@@ -107,7 +107,7 @@ const Services = () => {
     },
     {
       title: "Data Analytics",
-      description: "Comprehensive data analysis services that uncover valuable insights, trends, and patterns to optimize business performance and strategy.",
+      description: "Comprehensive data analysis services that uncover valuable insights, trends, and patterns to optimise business performance and strategy.",
       icon: <LineChart className="w-6 h-6" />
     },
     {
@@ -123,7 +123,7 @@ const Services = () => {
         <div ref={sectionRef} className="text-center mb-12 reveal">
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-zd-teal-dark">Our Services</h2>
           <p className="text-lg text-zd-gray-dark max-w-3xl mx-auto">
-            We specialize in cutting-edge Agentic AI solutions, complemented by comprehensive business intelligence and data analytics services.
+            We specialise in cutting-edge Agentic AI solutions, complemented by comprehensive business intelligence and data analytics services.
           </p>
         </div>
         
